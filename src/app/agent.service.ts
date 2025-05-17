@@ -10,7 +10,8 @@ export class AgentService {
   conversationId: string = '';
   userId: string = '';
 
-  agentTokenUrl = 'https://015dd0c5dbc2ef3db32a3aa4d225a5.02.environment.api.powerplatform.com/powervirtualagents/botsbyschema/crfc5_webChatSsoAgent/directline/token?api-version=2022-03-01-preview';
+  // Copy the connection string from your Copilot Studio agent native app channel to the agentTokenUrl below
+  agentTokenUrl = '';
   directLineUrl = 'https://directline.botframework.com/v3/directline/conversations';
 
   constructor(private http: HttpClient) {
