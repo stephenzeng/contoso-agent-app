@@ -1,59 +1,25 @@
-# ContosoAgentApp
+# Contoso Agent App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+This is a single page application created by Stephen Zeng with Angular standalone components. There is already the highly-customizable web-based client [Bot Framework Web Chat component](https://github.com/microsoft/BotFramework-WebChat) providing you a lot of out-of-box features. However, this project aims to demostrate how to connect to a Copilot Studio agent with user authentication only through http calls to the Direct Line API, which gives you more control from your client-side app implementation.
 
-## Development server
+The goal is to keep the code clear, simple and intutive with only essentials. For example, it assumes you can already have a way to obtain, with a staightforward tutorial below to help you. 
 
-To start a local development server, run:
+## Prerequisite
 
-```bash
-ng serve
-```
+To run the app locally and connect it to your Copilot Studio agent, ensure the following are in place:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- A Copilot Studio agent created and published. [[Microsoft Learn - Quickstart: Create and deploy an agent](https://learn.microsoft.com/en-us/microsoft-copilot-studio/fundamentals-get-started)]
+- Manual authentication is configured for your Copilot Studio agent. [[Microsoft Learn - Configure user authentication with Microsoft Entra ID](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configuration-authentication-azure-ad)]
+- An app registration for this client app is created. [[Microsoft Learn - Create app registrations for your custom website](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-sso)]
+- Be able to get the required user access token. [[Microsoft Learn - Tutorial: Add sign in and sign out in your Angular single-page application](https://learn.microsoft.com/en-us/entra/identity-platform/tutorial-single-page-apps-angular-sign-in-users-app)]
 
-## Code scaffolding
+## Launch the app
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+To start a local development server, run from the app folder:
 
 ```bash
-ng generate --help
+npm install
+ng serve -o
 ```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Once the server is running, it should open your browser and navigate to `http://localhost:4200/`. 
