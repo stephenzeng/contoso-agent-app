@@ -15,7 +15,7 @@ To run the app locally and connect it to your Copilot Studio agent, ensure the f
 
 ## Launch the app
 
-- In your agent in Copilot Studio, go to Channels, click Native app, copy the Connection string
+- In your agent in Copilot Studio, go to Channels, click Direct Line Speech, copy the Token Endpoint
 - Go to agent.service.ts file, paste the connection string to the variable agentTokenUrl
 - Run from the app folder path in your terminal:
 
