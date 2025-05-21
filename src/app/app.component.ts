@@ -75,11 +75,12 @@ export class AppComponent implements OnDestroy {
       const attachment = activity.attachments[0];
       console.log('attachment:', attachment);
       if (attachment?.contentType == "application/vnd.microsoft.card.oauth") {
+        const connectionName = attachment.content?.connectionName;
         const tokenExchangeResourceId = attachment.content?.tokenExchangeResource?.id;
         console.log('tokenExchangeResourceId:', tokenExchangeResourceId);
 
         if (tokenExchangeResourceId) {
-          this.agentService.signInUser(tokenExchangeResourceId, this.userAccessToken).then(res => {
+          this.agentService.signInUser(tokenExchangeResourceId, connectionName, this.userAccessToken).then(res => {
             console.log('signInUser response:', res);
             this.isAgentConnected = true;
           });

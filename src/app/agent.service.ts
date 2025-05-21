@@ -70,7 +70,7 @@ export class AgentService {
       });
   }
 
-  async signInUser(tokenExchangeResourceId: string, userAccessToken: string): Promise<any> {
+  async signInUser(tokenExchangeResourceId: string, connctionName: string, userAccessToken: string): Promise<any> {
     console.log('signInUser');
     return await this.post(`${this.directLineUrl}/${this.conversationId}/activities`,
       {
@@ -83,7 +83,7 @@ export class AgentService {
         "serviceUrl": "https://directline.botframework.com/",
         "type": "invoke",
         "value": {
-          "connectionName": "dbc02a4a-8bc9-4c1f-84a5-67bbd4a2e4eb",
+          "connectionName": connctionName,
           "id": tokenExchangeResourceId,
           "token": userAccessToken
         }
